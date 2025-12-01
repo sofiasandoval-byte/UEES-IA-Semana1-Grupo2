@@ -1,0 +1,24 @@
+import tensorflow as tf
+print("GPU disponible:", tf.config.list_physical_devices('GPU'))
+
+!pip install seaborn plotly -q
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import (
+    accuracy_score, classification_report, confusion_matrix,
+    mean_squared_error, r2_score
+)
+import warnings
+warnings.filterwarnings('ignore')
+
+plt.style.use('default')
+sns.set_palette("husl")
+plt.rcParams['figure.figsize'] = (10, 6)
+plt.rcParams['font.size'] = 12
+
+print("Entorno configurado correctamente en Google Colab")
